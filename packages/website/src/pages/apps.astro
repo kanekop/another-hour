@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/Card.astro';
+const schedulerUrl = import.meta.env.PUBLIC_SCHEDULER_URL;
+---
+<BaseLayout title="アプリケーション">
+  <div class="container mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-center mb-12">Applications</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <Card>
+        <span slot="title">Scheduler</span>
+        <p>日々のタスクを計画し、時間をデザインするためのツールです。</p>
+        <a href={schedulerUrl} target="_blank" rel="noopener noreferrer" class="text-ah-blue hover:underline mt-4 inline-block">
+          Schedulerを使ってみる
+        </a>
+      </Card>
+      <Card>
+        <span slot="title">Clock (近日公開)</span>
+        <p>新しい時間の流れを体感するためのウェブクロックです。</p>
+      </Card>
+    </div>
+  </div>
+</BaseLayout> 

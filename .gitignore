@@ -131,3 +131,9 @@ dist
 
 # Replit debugger
 .breakpoints
+
+# another-hour-website
+/packages/website/dist/
+/packages/website/.astro/
+content/drafts/
+*.env.local
