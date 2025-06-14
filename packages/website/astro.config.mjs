@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
-import i18n_pkg from "astro-i18n";
-const i18n = "default" in i18n_pkg ? i18n_pkg.default : i18n_pkg;
+import i18n from "astro-i18n";
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,5 +22,10 @@ export default defineConfig({
       }
     },
     routeTranslations: {}
-  })]
+  })],
+  vite: {
+    ssr: {
+      noExternal: ["astro-i18n"]
+    }
+  }
 });
